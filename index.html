@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geodetic Engineering Knowledge Quiz 2025</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Floating Action Button -->
+    <div id="floating-home-btn" class="floating-home-btn" style="display: none;">
+        <button class="fab-btn" title="Back to Home">
+            <span class="fab-icon">📐</span>
+        </button>
+    </div>
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="header-container">
+            <div class="logo-section">
+                <div class="geodetic-logo">
+                    <span class="logo-icon">🌍</span>
+                    <span class="logo-text">GeoQuiz</span>
+                </div>
+                <div class="site-title">Geodetic Engineering Quiz 2025</div>
+            </div>
+            <nav class="header-nav">
+                <button id="home-nav-btn" class="nav-btn">📐 Home</button>
+                <button id="leaderboard-nav-btn" class="nav-btn">🏆 Leaderboard</button>
+                <button id="about-nav-btn" class="nav-btn">ℹ️ About</button>
+                <div class="theme-toggle-nav">
+                    <label class="switch">
+                        <input type="checkbox" id="header-dark-mode-toggle">
+                        <span class="slider"></span>
+                    </label>
+                    <span class="theme-icon" id="header-theme-icon">☀️</span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Welcome Screen -->
+            <div id="welcome-screen" class="screen active">
+                <div class="welcome-content">
+                    <div class="hero-section">
+                        <div class="hero-badge">
+                            <span class="badge-text">📊 Geodetic Engineering Knowledge Assessment 2025</span>
+                        </div>
+                        <h1 class="hero-title">Photogrammetry & Surveying Quiz</h1>
+                        <p class="hero-subtitle">Test your knowledge of geodetic engineering, photogrammetry, and surveying principles!</p>
+
+                        <div class="hero-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">30</span>
+                                <span class="stat-label">Questions</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">3</span>
+                                <span class="stat-label">Difficulty Levels</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">5</span>
+                                <span class="stat-label">Lives</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">3</span>
+                                <span class="stat-label">Hints</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-features">
+                        <div class="feature-item">
+                            <div class="feature-icon">📸</div>
+                            <div class="feature-text">
+                                <strong>Photogrammetry Focus</strong>
+                                <span>Comprehensive questions on measurement from photographs</span>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">🗺️</div>
+                            <div class="feature-text">
+                                <strong>Surveying Principles</strong>
+                                <span>Test your knowledge of geodetic engineering fundamentals</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="rules-card">
+                        <div class="rules-header">
+                            <h3>📋 Assessment Guidelines</h3>
+                            <div class="difficulty-preview">
+                                <span class="diff-badge easy">Basic</span>
+                                <span class="diff-badge medium">Intermediate</span>
+                                <span class="diff-badge hard">Advanced</span>
+                            </div>
+                        </div>
+                        <div class="rules-grid">
+                            <div class="rule-item">
+                                <div class="rule-icon">🎯</div>
+                                <div class="rule-content">
+                                    <strong>30 Comprehensive Questions</strong>
+                                    <p>10 questions from each difficulty level covering photogrammetry, surveying, and geodetic principles</p>
+                                </div>
+                            </div>
+                            <div class="rule-item">
+                                <div class="rule-icon">❤️</div>
+                                <div class="rule-content">
+                                    <strong>5 Lives System</strong>
+                                    <p>Incorrect answers reduce your lives. Assessment ends when all lives are exhausted</p>
+                                </div>
+                            </div>
+                            <div class="rule-item">
+                                <div class="rule-icon">⏰</div>
+                                <div class="rule-content">
+                                    <strong>Timed Assessment</strong>
+                                    <p>30 seconds per question to simulate real-world decision making</p>
+                                </div>
+                            </div>
+                            <div class="rule-item">
+                                <div class="rule-icon">💡</div>
+                                <div class="rule-content">
+                                    <strong>Hint System</strong>
+                                    <p>Use up to 3 hints throughout the assessment for challenging questions</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="action-section">
+                        <button id="start-btn" class="btn btn-primary btn-large">
+                            <span class="btn-icon">📐</span>
+                            Begin Assessment
+                        </button>
+                        <div class="secondary-actions">
+                            <button id="view-leaderboard-btn" class="btn btn-secondary">
+                                <span class="btn-icon">🏆</span>
+                                View Leaderboard
+                            </button>
+                            <button id="about-nav-btn-home" class="btn btn-outline">
+                                <span class="btn-icon">ℹ️</span>
+                                Learn More
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Name Entry Screen -->
+            <div id="name-entry-screen" class="screen">
+                <div class="name-entry-content">
+                    <h2>📐 Ready to Begin?</h2>
+                    <p>Enter your name to save your assessment results to the leaderboard!</p>
+                    <div class="name-input-section">
+                        <input type="text" id="player-name-input" placeholder="Enter your name..." maxlength="20">
+                        <div class="name-actions">
+                            <button id="start-with-name-btn" class="btn btn-primary">Start Assessment</button>
+                            <button id="start-anonymous-btn" class="btn btn-secondary">Take Anonymously</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quiz Screen -->
+            <div id="quiz-screen" class="screen">
+                <div class="quiz-header">
+                    <div class="progress-section">
+                        <div class="difficulty-info">
+                            <span class="difficulty-badge" id="current-difficulty">Basic</span>
+                            <span class="question-counter" id="question-counter">1/10</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="progress-fill"></div>
+                        </div>
+                    </div>
+
+                    <div class="stats-section">
+                        <div class="timer">
+                            <span class="timer-icon">⏱️</span>
+                            <span class="timer-text" id="timer">30s</span>
+                        </div>
+                        <div class="lives" id="lives">
+                            <span class="heart">❤️</span>
+                            <span class="heart">❤️</span>
+                            <span class="heart">❤️</span>
+                            <span class="heart">❤️</span>
+                            <span class="heart">❤️</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="question-container">
+                    <h2 id="question-text"></h2>
+                    
+                    <div id="hint-container" class="hint-container" style="display: none;">
+                        <div class="hint-content">
+                            <span class="hint-icon">💡</span>
+                            <span id="hint-text"></span>
+                        </div>
+                    </div>
+
+                    <div id="options-container" class="options-container"></div>
+
+                    <div id="result-container" class="result-container" style="display: none;">
+                        <div id="result-message" class="result-message"></div>
+                    </div>
+
+                    <div class="action-buttons">
+                        <button id="submit-btn" class="btn btn-primary" disabled>Submit Answer</button>
+                        <button id="hint-btn" class="btn btn-secondary">
+                            <span class="hint-icon">💡</span>
+                            Hint (<span id="hints-left">3</span> left)
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Results Screen -->
+            <div id="results-screen" class="screen">
+                <div class="results-content">
+                    <div class="results-header">
+                        <div class="trophy-icon">🎓</div>
+                        <h1>Assessment Complete!</h1>
+                        <div class="player-name-display" id="player-name-display"></div>
+                    </div>
+
+                    <div class="score-breakdown">
+                        <div class="score-item easy">
+                            <span class="difficulty-label">Basic</span>
+                            <span class="score" id="easy-score">0/10</span>
+                        </div>
+                        <div class="score-item medium">
+                            <span class="difficulty-label">Intermediate</span>
+                            <span class="score" id="medium-score">0/10</span>
+                        </div>
+                        <div class="score-item hard">
+                            <span class="difficulty-label">Advanced</span>
+                            <span class="score" id="hard-score">0/10</span>
+                        </div>
+                    </div>
+
+                    <div class="final-score-card">
+                        <h2>Final Score: <span id="final-score">0/30</span></h2>
+                        <div id="score-message" class="score-message"></div>
+                        <div class="quiz-stats">
+                            <span>Hints used: <span id="hints-used-display">0</span>/3</span>
+                            <span>•</span>
+                            <span>Rank: <span id="player-rank">#-</span></span>
+                        </div>
+                    </div>
+
+                    <div id="wrong-answers-section" class="wrong-answers-section" style="display: none;">
+                        <h3>📝 Review Wrong Answers:</h3>
+                        <div id="wrong-answers-list" class="wrong-answers-list"></div>
+                    </div>
+
+                    <div class="result-actions">
+                        <button id="play-again-btn" class="btn btn-primary">
+                            <span class="icon">🔄</span>
+                            Retake Assessment
+                        </button>
+                        <button id="view-leaderboard-results-btn" class="btn btn-secondary">
+                            <span class="icon">🏆</span>
+                            View Leaderboard
+                        </button>
+                        <button id="share-btn" class="btn btn-secondary">
+                            <span class="icon">📤</span>
+                            Share Results
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Game Over Screen -->
+            <div id="game-over-screen" class="screen">
+                <div class="game-over-content">
+                    <h1 class="game-over-title">Assessment Incomplete!</h1>
+                    <p class="game-over-subtitle">You've exhausted all available attempts!</p>
+                    <div class="player-name-display" id="game-over-player-name"></div>
+
+                    <div class="partial-progress">
+                        <h3>Your Progress:</h3>
+                        <div id="partial-breakdown" class="partial-breakdown"></div>
+                    </div>
+
+                    <div class="result-actions">
+                        <button id="try-again-btn" class="btn btn-primary">
+                            <span class="icon">🔄</span>
+                            Retry Assessment
+                        </button>
+                        <button id="view-leaderboard-gameover-btn" class="btn btn-secondary">
+                            <span class="icon">🏆</span>
+                            View Leaderboard
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Leaderboard Screen -->
+            <div id="leaderboard-screen" class="screen">
+                <div class="leaderboard-content">
+                    <div class="leaderboard-header">
+                        <h1>🏆 Assessment Leaderboard</h1>
+                        <p>Top performers in Geodetic Engineering & Photogrammetry Assessment 2025</p>
+                    </div>
+
+                    <div class="leaderboard-controls">
+                        <button id="clear-leaderboard-btn" class="btn btn-danger btn-small">
+                            🗑️ Clear All Scores
+                        </button>
+                    </div>
+
+                    <div id="leaderboard-list" class="leaderboard-list">
+                        <div class="no-scores">
+                            <p>No scores yet! Be the first to complete the assessment.</p>
+                        </div>
+                    </div>
+
+                    <div class="leaderboard-actions">
+                        <button id="back-to-home-btn" class="btn btn-primary">
+                            📐 Back to Home
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- About Screen -->
+            <div id="about-screen" class="screen">
+                <div class="about-content">
+                    <div class="about-header">
+                        <div class="about-hero">
+                            <h1>ℹ️ About This Assessment</h1>
+                            <p class="about-subtitle">Comprehensive information about the Geodetic Engineering & Photogrammetry Knowledge Assessment 2025</p>
+                        </div>
+                    </div>
+
+                    <div class="about-grid">
+                        <div class="about-card primary">
+                            <div class="card-header">
+                                <div class="card-icon">🎯</div>
+                                <h3>Purpose & Mission</h3>
+                            </div>
+                            <div class="card-content">
+                                <p>Welcome to the Geodetic Engineering & Photogrammetry Knowledge Assessment 2025! This comprehensive evaluation tests your understanding of photogrammetry, surveying principles, and geodetic engineering fundamentals.</p>
+                                <p>Our mission is to provide a thorough assessment tool that evaluates both theoretical knowledge and practical understanding of geodetic engineering concepts.</p>
+                            </div>
+                        </div>
+
+                        <div class="about-card">
+                            <div class="card-header">
+                                <div class="card-icon">🏗️</div>
+                                <h3>Assessment Structure</h3>
+                            </div>
+                            <div class="card-content">
+                                <div class="feature-list">
+                                    <div class="feature-item-about">
+                                        <strong>📸 Photogrammetry Focus:</strong>
+                                        <span>Comprehensive questions covering measurement principles from photographs</span>
+                                    </div>
+                                    <div class="feature-item-about">
+                                        <strong>📊 Three Difficulty Levels:</strong>
+                                        <span>Basic, Intermediate, and Advanced questions test progressive knowledge</span>
+                                    </div>
+                                    <div class="feature-item-about">
+                                        <strong>📝 Multiple Question Types:</strong>
+                                        <span>Multiple choice, True/False, and Fill-in-the-blank questions</span>
+                                    </div>
+                                    <div class="feature-item-about">
+                                        <strong>🏆 Performance Tracking:</strong>
+                                        <span>Compare your geodetic engineering knowledge with peers</span>
+                                    </div>
+                                    <div class="feature-item-about">
+                                        <strong>💡 Guided Learning:</strong>
+                                        <span>Hint system provides educational support when needed</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="about-card">
+                            <div class="card-header">
+                                <div class="card-icon">🎨</div>
+                                <h3>Features & Technology</h3>
+                            </div>
+                            <div class="card-content">
+                                <div class="tech-grid">
+                                    <div class="tech-item">
+                                        <div class="tech-icon">🌓</div>
+                                        <div class="tech-text">
+                                            <strong>Professional Interface</strong>
+                                            <span>Clean, engineering-focused design</span>
+                                        </div>
+                                    </div>
+                                    <div class="tech-item">
+                                        <div class="tech-icon">📱</div>
+                                        <div class="tech-text">
+                                            <strong>Responsive Design</strong>
+                                            <span>Works on all devices</span>
+                                        </div>
+                                    </div>
+                                    <div class="tech-item">
+                                        <div class="tech-icon">📊</div>
+                                        <div class="tech-text">
+                                            <strong>Detailed Analytics</strong>
+                                            <span>Comprehensive results & progress tracking</span>
+                                        </div>
+                                    </div>
+                                    <div class="tech-item">
+                                        <div class="tech-icon">📤</div>
+                                        <div class="tech-text">
+                                            <strong>Results Sharing</strong>
+                                            <span>Share your achievements</span>
+                                        </div>
+                                    </div>
+                                    <div class="tech-item">
+                                        <div class="tech-icon">🔄</div>
+                                        <div class="tech-text">
+                                            <strong>Review System</strong>
+                                            <span>Learn from incorrect answers</span>
+                                        </div>
+                                    </div>
+                                    <div class="tech-item">
+                                        <div class="tech-icon">📐</div>
+                                        <div class="tech-text">
+                                            <strong>Professional Navigation</strong>
+                                            <span>Intuitive assessment interface</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="about-card highlight">
+                            <div class="card-header">
+                                <div class="card-icon">🚀</div>
+                                <h3>Ready to Begin?</h3>
+                            </div>
+                            <div class="card-content">
+                                <p>Test your knowledge of photogrammetry, surveying principles, geodetic measurements, and spatial analysis. Each assessment provides unique insights into your geodetic engineering expertise!</p>
+                                <div class="cta-stats">
+                                    <div class="cta-stat">
+                                        <span class="cta-number">30</span>
+                                        <span class="cta-label">Assessment Questions</span>
+                                    </div>
+                                    <div class="cta-stat">
+                                        <span class="cta-number">3</span>
+                                        <span class="cta-label">Difficulty Levels</span>
+                                    </div>
+                                    <div class="cta-stat">
+                                        <span class="cta-number">∞</span>
+                                        <span class="cta-label">Attempts</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about-actions">
+                        <button id="start-quiz-about" class="btn btn-primary btn-large">
+                            <span class="btn-icon">📐</span>
+                            Start Assessment Now
+                        </button>
+                        <button id="back-to-home-about-btn" class="btn btn-secondary">
+                            <span class="btn-icon">🏠</span>
+                            Back to Home
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Geodetic Engineering Assessment 2025</h4>
+                    <p>Comprehensive evaluation of photogrammetry, surveying, and geodetic engineering knowledge for professionals and students.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#" id="footer-home">Home</a></li>
+                        <li><a href="#" id="footer-leaderboard">Leaderboard</a></li>
+                        <li><a href="#" id="footer-about">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Assessment Stats</h4>
+                    <ul>
+                        <li>30 Comprehensive Questions</li>
+                        <li>3 Difficulty Levels</li>
+                        <li>Photogrammetry Focus</li>
+                        <li>Professional Assessment</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Geodetic Engineering Assessment. Built for professional development! 📐</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Confirmation Modal -->
+    <div id="confirmation-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <h3 id="modal-title">Confirm Action</h3>
+            <p id="modal-message">Are you sure you want to proceed?</p>
+            <div class="modal-actions">
+                <button id="modal-confirm-btn" class="btn btn-danger">Confirm</button>
+                <button id="modal-cancel-btn" class="btn btn-secondary">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/questions.js"></script>
+    <script src="/js/script.js"></script>
+</body>
+</html>
